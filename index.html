@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Pet Próximo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <span>Meu pet próximo</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Parceiros</a></li>
+        </ul>
+        <div class="nav-buttons">
+            <button class="sign-in">Entrar →</button>
+            <button class="sign-up">Cadastrar →</button>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <main class="main-section">
+        <div class="text-content">
+            <h1>Seu pet <span>Bem cuidado</span> 🐶</h1>
+            <p>Antes de levar seu pet para ser cuidado, selecione o lugar certo.</p>
+            <div class="cta-buttons">
+                <button class="services-btn">Nossos serviços</button>
+                <button class="schedule-call">📞 Contato</button>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/mulher_pet.png" alt="Mulher com pet">
+        </div>
+    </main>
+
+    <!-- Pet Cards Section -->
+    <section class="pet-cards">
+        <div class="card">
+            <img src="images/cachorrorosa.jpg" alt="Cachorro Vira Lata">
+            <h3>Clínico Geral</h3>
+            <p>Exames de rotina / Vacinação / Castração</p>
+            <a href="#" class="more">Ver mais</a>
+        </div>
+        <div class="card">
+            <img src="images/gatoamarelo.jpg" alt="Gato Siamês">
+            <h3>Felinos</h3>
+            <p>Teste rápido Fiv-Felv / Nutrição / Comportamento</p>
+            <a href="#" class="more">Ver mais</a>
+        </div>
+        <div class="card">
+            <img src="images/passaroazul.jpg" alt="Pássaro Ring Neck">
+            <h3>Silvestres & Exóticos</h3>
+            <p>Consulta especializada / Cuidado e manejo / Nutrição especializada</p>
+            <a href="#" class="more">Ver mais</a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!--python
+
+response = [
+    # ... (dados do JSON)
+]
+
+resposta = []
+for loja in response:
+    for produto in loja["produtos"]:
+        if produto["preço"] > 30:
+            resposta.append(produto)
+
+print(resposta)
+
+Explicação:
+
+    Estrutura de Repetição Aninhada: Utilizei um loop for para iterar sobre cada loja no JSON. Em seguida, um segundo loop for itera sobre a lista de produtos de cada loja.
+    Condição: A condição if produto["preço"] > 30 verifica se o preço do produto é maior que 30. Se for, o produto é adicionado à lista resposta.
+    Decisão: Essa abordagem é clara e direta, permitindo a filtragem de produtos em uma estrutura aninhada de maneira eficiente. Poderia usar métodos como filter, mas a legibilidade e a clareza do código seriam comprometidas, principalmente para quem não está familiarizado com programação funcional.
+
+2. Capturar o preço do Produto B
+
+python
+
+responsejson = {
+    # ... (dados do JSON)
+}
+
+produto_b = None
+
+for produto in responsejson["produtos"]:
+    if produto["nome"] == "Produto B":
+        produto_b = produto["preço"]
+        break
+
+print(produto_b)
+
+Explicação:
+
+    Loop e Condicional: Usei um loop para percorrer os produtos. Ao encontrar "Produto B", o preço é atribuído à variável produto_b, e break encerra o loop, pois não é necessário continuar a busca.
+    Decisão: Essa solução é eficiente porque interrompe a busca assim que o produto é encontrado, evitando iterações desnecessárias. Poderia usar um filter, mas nesse caso, uma estrutura simples é mais eficaz.
+
+3. Ordenar uma lista em ordem crescente
+
+python
+
+lista = [5, 8, 3, 0, 8, 1, 9, 10, 20, 30]
+
+lista.sort()
+print(lista)
+
+Explicação:
+
+    Método sort: Usei o método sort() que modifica a lista original para ordená-la. Este método é mais eficiente em termos de memória em comparação com sorted(), que cria uma nova lista.
+    Decisão: sort() é a escolha ideal quando você não precisa manter a lista original. Para ordenar uma lista pequena, a diferença de desempenho não é significativa, mas sort() é mais comum em situações onde a memória é uma consideração.
+
+4. Remover espaços em branco
+
+python
+
+lista = ["   joao   ", "   maria   ", "  joana  "]
+
+lista_strip = []
+for item in lista:
+    lista_strip.append(item.strip())
+
+print(lista_strip)
+
+Explicação:
+
+    Loop para Adição: Através de um loop, cada item da lista original é processado com o método strip(), que remove os espaços em branco no início e no fim da string. Esses itens são então adicionados a uma nova lista.
+    Decisão: Usar um loop aqui é simples e direto. Poderia usar uma list comprehension para uma solução mais compacta, mas a clareza do método for é preferível em contextos educacionais.
+
+5. Remover o segundo item da lista
+
+python
+
+lista = [1, 2, 3, 4, 5, 6]
+
+lista.pop(1)
+print(lista)
+
+Explicação:
+
+    Método pop: O método pop(1) remove o item no índice 1 (o segundo item) e o retorna. A lista original é modificada.
+    Decisão: O uso de pop() é eficiente e direto, evitando a necessidade de um loop para encontrar o item a ser removido.
+
+6. Substituir todos os "joao" por "maria"
+
+python
+
+lista = ["joao", "ana", "joana", "joao", "ricardo", "joao"]
+
+for i in range(len(lista)):
+    if lista[i] == "joao":
+        lista[i] = "maria"
+
+print(lista)
+
+Explicação:
+
+    Loop com range: Um loop com range(len(lista)) itera sobre os índices da lista. Quando "joao" é encontrado, ele é substituído por "maria".
+    Decisão: Esse método é intuitivo e funciona bem para a tarefa. Alternativamente, uma list comprehension poderia ser usada, mas isso poderia complicar a leitura.
+
+7. Loop while para imprimir itens até 5
+
+python
+
+lista = [1, 2, 3, 4, 5, 6]
+i = 0
+while i <= 5:
+    print(lista[i])
+    i += 1
+
+Explicação:
+
+    Loop while: Um loop while que continua enquanto i for menor ou igual a 5. A cada iteração, o item correspondente na lista é impresso, e i é incrementado.
+    Decisão: O uso do while permite controle mais explícito sobre o índice e o número de iterações, o que pode ser útil em outros cenários.
+
+8. Contar tarefas completadas e pendentes
+
+python
+
+import requests
+
+def qts_tasks():
+    response = requests.get('https://jsonplaceholder.typicode.com/todos')
+
+    if response.status_code == 200:
+        todos = response.json()
+        completas = 0
+        pendentes = 0
+
+        for todo in todos:
+            if todo['completed']:
+                completas += 1
+            else:
+                pendentes += 1
+    
+        return completas, pendentes
+
+Explicação:
+
+    Requisição HTTP: A função faz uma requisição para a URL indicada e verifica o status da resposta.
+    Contagem: Utiliza um loop para contar quantas tarefas estão completadas e quantas não estão, incrementando contadores.
+    Decisão: Esta solução é simples e eficaz, e o uso de um loop direto é adequado para o problema. Alternativamente, um Counter do módulo collections poderia ser usado, mas complicaria a solução sem ganho significativo.
+
+9. Extrair dados de usuários
+
+python
+
+def extrair_dados():
+    response = requests.get('https://jsonplaceholder.typicode.com/users')
+    
+    if response.status_code == 200:
+        usuarios = response.json() 
+        dados_extraidos = []
+
+        for usuario in usuarios:
+            dados = {
+                'nome': usuario['name'],
+                'username': usuario['username'],
+                'email': usuario['email'],
+                'rua': usuario['address']['street'],
+                'numero': usuario['address']['suite']
+            }
+            dados_extraidos.append(dados)
+
+        return dados_extraidos
+
+Explicação:
+
+    Requisição e Parsing: A função realiza uma requisição para obter os dados dos usuários e verifica a resposta. Depois, usa um loop para extrair os campos relevantes.
+    Decisão: A abordagem escolhida é clara e eficiente. Uma list comprehension poderia ser usada para compactar o código, mas a legibilidade é mantida com um loop explícito.
+
+10. Adicionar item em uma lista FIFO
+
+python
+
+import queue
+
+fila_FIFO = queue.Queue()
+fila_FIFO.put("Primeiro da fila")
+fila_FIFO.put("Segundo da fila")
+print(fila_FIFO.get())
+
+Explicação:
+
+    Queue FIFO: Utilizei a classe Queue do módulo queue, que garante a ordem FIFO (First In, First Out).
+    Decisão: Essa abordagem é ideal para garantir que os itens sejam processados na ordem correta. A Queue é adequada para situações onde a concorrência é uma consideração, embora não seja necessária aqui.
+
+11. Adicionar item em uma lista LIFO
+
+python
+
+from collections import deque
+
+lista = deque([1, 2, 3, 4])
+
+def lifo(novo_item, lista):
+    if len(lista) >= 4:
+        lista.append(novo_item)
+        head = lista.popleft()
+        print(head)
+        return head
+
+resultado = lifo(5, lista)
+print(resultado)
+
+Explicação:
+
+    Deque LIFO: Usei deque da biblioteca collections, que permite adicionar elementos ao final e removê-los do início, seguindo a lógica LIFO (Last In, First Out).
+    Decisão: Essa estrutura é eficiente para operações de inserção e remoção. O uso de popleft() torna a operação clara e fácil de entender.
+
+Desafio: Criar uma interface de banco
+
+python
+
+class ContaBancaria:
+    count = 1
+
+    def __init__(self, nome, cpf):
+        self.id = ContaBancaria.count
+        ContaBancaria.count += 1
+        self.nome = nome
+        self.cpf = cpf
+        self.saldo = 0
+
+    def deposito(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            return f'Depósito: {valor}. Saldo: {self.saldo}'
+        return 'Depósito inválido.'
+
+    def saque(self, valor):
+        if 0 < valor <= self -->

@@ -1,0 +1,194 @@
+:root {
+    --primary-color: #8f5fe8; /* Define a cor primária como um roxo claro, utilizada em textos e botões */
+    --secondary-color: #ffede9; /* Define a cor secundária como um tom rosado, usada como fundo na seção principal */
+    --background-color: #ffffff; /* Define a cor de fundo da página como branco */
+    --highlight-color: #ffede9; /* Cor de destaque semelhante à secundária, para consistência visual */
+    --text-color: #333333; /* Define a cor padrão para textos como um cinza escuro */
+    --cta-color: #673ab7; /* Define a cor de ação para botões de CTA, um roxo mais escuro */
+}
+
+* {
+    margin: 0; /* Remove as margens padrão de todos os elementos */
+    padding: 0; /* Remove o padding padrão de todos os elementos */
+    box-sizing: border-box; /* Define o modelo de caixa para incluir padding e borda no tamanho total */
+    font-family: Arial, sans-serif; /* Define Arial como fonte padrão, com sans-serif como fallback */
+}
+
+body {
+    background-color: var(--background-color); /* Aplica a cor de fundo branca definida na variável */
+}
+
+/* Navbar */
+.navbar {
+    display: flex; /* Ativa o layout flex para organizar os elementos da barra de navegação */
+    justify-content: space-between; /* Distribui os elementos da barra nos extremos */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 1rem 2rem; /* Adiciona padding de 1rem no topo/baixo e 2rem nos lados */
+    background-color: var(--background-color); /* Define o fundo da barra de navegação como branco */
+}
+
+.logo {
+    display: flex; /* Usa flexbox para alinhar o logo e o texto ao lado dele */
+    align-items: center; /* Centraliza verticalmente o logo e o texto */
+}
+
+.logo img {
+    width: 40px; /* Define uma largura fixa para a imagem do logo */
+    margin-right: 10px; /* Adiciona espaço à direita da imagem para afastar do texto */
+}
+
+.logo span {
+    font-size: 1.5rem; /* Define o tamanho da fonte do texto do logo */
+    font-weight: bold; /* Aplica uma fonte em negrito para destaque */
+    color: var(--text-color); /* Define a cor do texto usando a variável de cor padrão */
+}
+
+.nav-links {
+    list-style: none; /* Remove os marcadores de lista dos links de navegação */
+    display: flex; /* Usa flexbox para organizar os links em linha */
+    gap: 1.5rem; /* Define um espaçamento de 1.5rem entre os links */
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: var(--text-color); /* Define a cor do texto dos links */
+    font-size: 1rem; /* Define o tamanho da fonte dos links */
+}
+
+.nav-buttons {
+    display: flex; /* Organiza os botões de navegação em linha */
+    gap: 1rem; /* Define um espaçamento de 1rem entre os botões */
+}
+
+.sign-in, .sign-up {
+    background: none; /* Remove qualquer cor de fundo */
+    border: none; /* Remove a borda padrão do botão */
+    font-size: 1rem; /* Define o tamanho da fonte */
+    color: var(--text-color); /* Define a cor do texto dos botões */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    display: flex; /* Usa flex para alinhamento */
+    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+}
+
+/* Main Section */
+.main-section {
+    display: flex; /* Ativa flexbox para alinhar o texto e a imagem */
+    justify-content: space-between; /* Separa o texto e a imagem nas extremidades */
+    align-items: center; /* Centraliza verticalmente o texto e a imagem */
+    padding: 2rem 4rem; /* Adiciona padding de 2rem no topo/baixo e 4rem nas laterais */
+    position: relative; /* Define posição relativa para uso do pseudo-elemento ::before */
+}
+
+.text-content {
+    max-width: 50%; /* Limita a largura do conteúdo de texto a 50% da largura da seção */
+}
+
+.text-content h1 {
+    font-size: 3rem; /* Define um tamanho grande para o título principal */
+    font-weight: bold; /* Deixa o título em negrito */
+    color: var(--text-color); /* Define a cor do texto do título */
+}
+
+.text-content h1 span {
+    color: var(--primary-color); /* Aplica a cor primária ao texto destacado dentro do título */
+}
+
+.text-content p {
+    margin-top: 1rem; /* Adiciona um espaçamento acima do parágrafo */
+    font-size: 1.2rem; /* Define o tamanho da fonte do parágrafo */
+    color: var(--text-color); /* Define a cor do texto do parágrafo */
+}
+
+.cta-buttons {
+    display: flex; /* Usa flexbox para organizar os botões de CTA em linha */
+    gap: 1rem; /* Define um espaçamento de 1rem entre os botões */
+    margin-top: 1.5rem; /* Adiciona espaço acima dos botões */
+}
+
+.services-btn {
+    background-color: var(--cta-color); /* Define a cor de fundo do botão de CTA principal */
+    color: #fff; /* Define a cor do texto como branco */
+    padding: 0.8rem 1.5rem; /* Adiciona padding para aumentar o tamanho do botão */
+    font-size: 1rem; /* Define o tamanho da fonte */
+    border: none; /* Remove a borda do botão */
+    border-radius: 5px; /* Arredonda levemente os cantos do botão */
+    cursor: pointer; /* Muda o cursor para indicar interatividade */
+}
+
+.schedule-call {
+    background-color: #e0e0e0; /* Define a cor de fundo do botão de contato */
+    color: var(--text-color); /* Define a cor do texto como a cor padrão */
+    padding: 0.8rem 1.5rem; /* Adiciona padding para um botão maior */
+    font-size: 1rem; /* Define o tamanho da fonte */
+    border: none; /* Remove a borda do botão */
+    border-radius: 5px; /* Arredonda levemente os cantos */
+    cursor: pointer; /* Muda o cursor para indicar clicável */
+}
+
+.image-container {
+    width: 50%; /* Limita a largura do container da imagem a 50% */
+    text-align: right; /* Alinha a imagem à direita */
+    position: relative; /* Define posição relativa para posicionar a imagem e fundo */
+}
+
+.image-container img {
+    max-width: 90%; /* Limita a largura da imagem a 90% do container */
+    border-radius: 20px; /* Arredonda os cantos da imagem */
+    position: relative; /* Define posição relativa para sobrepor o fundo rosa */
+    z-index: 1; /* Coloca a imagem acima do fundo rosa */
+}
+
+.main-section::before {
+    content: ""; /* Cria um elemento visual vazio */
+    position: absolute; /* Define posição absoluta para posicionamento personalizado */
+    top: 0; /* Posiciona o elemento no topo da seção principal */
+    right: 0; /* Alinha o fundo rosa ao lado direito */
+    bottom: 0; /* Expande o fundo até a base da seção */
+    width: 60%; /* Define a largura do fundo rosa como 60% */
+    background-color: var(--highlight-color); /* Aplica a cor rosa ao fundo */
+    z-index: 0; /* Coloca o fundo atrás da imagem */
+}
+
+/* Pet Cards Section */
+.pet-cards {
+    display: flex; /* Usa flexbox para organizar os cards em linha */
+    justify-content: space-around; /* Espalha os cards igualmente ao longo da seção */
+    padding: 2rem; /* Adiciona padding ao redor da seção de cards */
+}
+
+.card {
+    background: #fff; /* Define fundo branco para cada card */
+    border-radius: 15px; /* Arredonda os cantos do card */
+    padding: 1.5rem; /* Adiciona padding interno para espaçamento dos elementos */
+    text-align: center; /* Centraliza o texto dentro do card */
+    width: 250px; /* Define a largura fixa dos cards */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave para dar profundidade */
+}
+
+.card img {
+    width: 80px; /* Define largura fixa para a imagem do card */
+    height: 80px; /* Define altura fixa para manter a proporção */
+    object-fit: cover; /* Ajusta a imagem para cobrir sem distorção */
+    border-radius: 50%; /* Deixa a imagem em formato circular */
+    margin-bottom: 1rem; /* Adiciona espaço abaixo da imagem */
+}
+
+.card h3 {
+    font-size: 1.2rem; /* Define tamanho da fonte do título do card */
+    color: var(--text-color); /* Define a cor */
+    font-weight: bold;
+}
+
+.card p {
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.more {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+}
